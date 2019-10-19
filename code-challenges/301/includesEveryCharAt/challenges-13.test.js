@@ -154,9 +154,9 @@ For example, ['Tuesday', 'Monday', 'Wednesday and Thursday', 'Tuesday 2', 'Thurs
 ]
 ------------------------------------------------------------------------------------------------ */
 
-const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-
-const sortByDay = (arr) => {
+// const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+// console.log(daysOfWeek);
+const sortByDay = () => {
   // Solution code here...
 };
 
@@ -168,7 +168,7 @@ Write a function named characterByIndex that takes in an array of strings and re
 For example, ['abcd', 'efgh', 'ijkl', 'mnop'] returns ['a', 'f', 'k', 'p']
 ------------------------------------------------------------------------------------------------ */
 
-const characterByIndex = (arr) => {
+const characterByIndex = () => {
   // Solution code here...
 };
 

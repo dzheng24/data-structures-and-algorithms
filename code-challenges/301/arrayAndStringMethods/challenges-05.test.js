@@ -189,7 +189,7 @@ CHALLENGE 8 - Stretch Goal
 Write a function named totalSumCSV that, given a string of comma-separated values (CSV) as input. (e.g. "1,2,3"), returns the total sum of the numeric values (e.g. 6).
 ------------------------------------------------------------------------------------------------ */
 
-const totalSumCSV = (str) => {
+const totalSumCSV = () => {
   let total = 0;
   // Solution code here...
   return total;
@@ -204,7 +204,7 @@ Write a function named removeVowels that takes in a string and returns a new str
 For example, removeVowels('gregor') returns 'grgr'.
 ------------------------------------------------------------------------------------------------ */
 
-const removeVowels = (str) => {
+const removeVowels = () => {
   // Solution code here...
 };
 
@@ -218,7 +218,7 @@ For example, extractVowels('gregor') returns ['grgr', 'eo'].
 Similarly, extractVowels('The quick brown fox') returns ['Th qck brwn fx', 'eioou']
 ------------------------------------------------------------------------------------------------ */
 
-const extractVowels = (str) => {
+const extractVowels = () => {
   // Solution code here...
 };
 
