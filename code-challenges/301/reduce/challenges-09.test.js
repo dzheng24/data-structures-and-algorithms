@@ -250,7 +250,7 @@ const snorlaxData = {
   weight: 4600,
 };
 
-const extractStat = (statName, arr) => {
+const extractStat = () => {
   // Solution code here...
 };
 
@@ -264,7 +264,7 @@ Write a function named extractChildren that, given the array of characters from 
 2) Then, uses reduce to return an array of all the children's names in the filtered array
 ------------------------------------------------------------------------------------------------ */
 
-const extractChildren = (arr) => {
+const extractChildren = () => {
   // Solution code here...
 };
 

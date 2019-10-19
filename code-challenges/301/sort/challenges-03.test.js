@@ -195,7 +195,7 @@ const meetings = [
   new Meeting('Friday', '1200', '1345'),
 ];
 
-const sortMeetingsByDay = (arr) => {
+const sortMeetingsByDay = () => {
   // Solution code here...
 };
 
@@ -209,7 +209,7 @@ Sort the meetings in the order that they start. If two meetings start at the sam
 You DO NOT need to use your solution to Challenge 9 in completing Challenge 10.
 ------------------------------------------------------------------------------------------------ */
 
-const sortSchedule = (arr) => {
+const sortSchedule = () => {
   // Solution code here...
 };
 

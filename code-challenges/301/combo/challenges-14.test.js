@@ -155,7 +155,7 @@ Here is a sample board:
 ];
 ------------------------------------------------------------------------------------------------ */
 
-const detectTicTacToeWin = (board) => {
+const detectTicTacToeWin = () => {
   // Solution code here...
 };
 
