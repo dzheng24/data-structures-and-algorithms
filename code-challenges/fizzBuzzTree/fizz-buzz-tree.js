@@ -36,4 +36,5 @@ class BinaryTree {
   }
 }
 
+console.log(Node, BinaryTree);
 

@@ -30,7 +30,7 @@ class BinaryTree {
     const queue = new Queue();
     let results = [];
     queue.enqueue(current);
-    
+
     while (queue.total.length > 0) {
       const current = queue.dequeue();
       results.push(current.value);
