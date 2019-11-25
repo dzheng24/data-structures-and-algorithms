@@ -24,6 +24,20 @@ class LinkedList {
     return this;
   }
 
+  append(value) {
+    let node = new Node(value);
+    if (!this.head) {
+      this.head = node;
+      return this;
+    }
+    let current = this.head;
+    while (current.next) {
+      current = current.next;
+    }
+    current.next = node;
+    return this;
+  }
+
   includes(value) {
     if (!this.head) {
       return false;
@@ -52,11 +66,11 @@ class LinkedList {
   }
 }
 
-let linkedList = new LinkedList;
-console.log(linkedList.insert(6));
-console.log(linkedList.insert(7));
-console.log(linkedList.includes(7));
-console.log(linkedList.toString());
+// let linkedList = new LinkedList;
+// console.log(linkedList.insert(6));
+// console.log(linkedList.insert(7));
+// console.log(linkedList.includes(7));
+// console.log(linkedList.toString());
 
 module.exports = {
   Node,
