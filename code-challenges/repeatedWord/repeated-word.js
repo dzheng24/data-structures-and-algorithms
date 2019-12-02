@@ -1,26 +1,36 @@
 'use strict';
 
-const Hashtable = require('../hashtable/hashtable');
+//Algorithm
+// 1. Create an empty object
+// 2. looping through the array of strings
+// 3. look for characters that have a space or punctuation following it
+// 4. compare that word against the object
+//  -if the word does not exist, push that word into the object
+//  -if the word exist, return the word
+
 
 
 function repeatedWord (str) {
   let newList = str.toLowerCase();
-  console.log(newList);
-  let newHash = new Hashtable(1000);
-
+  let wordObject = {};
+  let word = '';
   for (let i = 0; i < newList.length; i++) {
-    newHash.add(newList[i], 'none');
-    for (let j = 0; j < newHash.buckets.length; i++) {
-      if (newHash.contains(newList[i])) {
-        return newList[i];
+    word += newList[i]
+    if (newList[i] === ' ') {
+      // console.log(word);
+      if (wordObject[word.replace(/[,']/,'')]) {
+        return word.replace(/\s/,'');
+      } else {
+        wordObject[word.replace(/[,']/,'')] = true;
+        word = '';
       }
     }
   }
-  return null;
+  return false;
 }
 
+module.exports = repeatedWord;
 
 
-
-console.log(repeatedWord('it was a was great day'));
+// console.log(repeatedWord('It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York'));
 
