@@ -43,7 +43,6 @@ class Hashtable {
     let list = this.buckets[index];
 
     let current = list.head;
-    console.log(current.value);
     while(current){
       // eslint-disable-next-line no-prototype-builtins
       if(current.value.key === key){
@@ -62,9 +61,8 @@ newThang.add('beast','1987 iroc-z');
 newThang.add('qb','russell wilson');
 newThang.add('qb','matt stafford');
 
-// console.log(newThang.buckets[1]);
-
 console.log(newThang.contains('rb'));
+
 module.exports = Hashtable;
 
 //source: https://reactgo.com/hashtable-javascript/
