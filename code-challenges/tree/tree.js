@@ -130,7 +130,6 @@ six.right = seven;
 seven.left = eight;
 seven.right = nine;
 
-let tree = new BinaryTree(one);
 
 // console.log(tree.preOrder());
 // console.log(tree.inOrder());
