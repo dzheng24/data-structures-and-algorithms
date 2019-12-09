@@ -61,7 +61,7 @@ newThang.add('beast','1987 iroc-z');
 newThang.add('qb','russell wilson');
 newThang.add('qb','matt stafford');
 
-console.log(newThang.contains('rb'));
+console.log(newThang.contains('r'));
 
 module.exports = Hashtable;
 
