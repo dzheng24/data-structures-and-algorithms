@@ -4,6 +4,7 @@
 class Node {
   constructor(value) {
     this.left = null;
+    this.next = null;
     this.right = null;
     this.value = value;
   }
@@ -11,29 +12,52 @@ class Node {
 
 class Queue {
   constructor() {
-    this.total = [];
+    this.front = null;
+    this.back = null;
   }
-  dequeue() {
-    return this.total.shift();
-  }
+
   enqueue(value) {
-    this.total.push(value);
+    let node = new Node(value);
+    if (this.front) {
+      this.back.next = node;
+      this.back = node;
+    }
+    else {
+      this.front = node;
+      this.back = node;
+    }
+  }
+
+  dequeue() {
+    if (!this.front) {
+      return null;
+    }
+    let dequeuedValue = this.front.value;
+    this.front = this.front.next;
+    return dequeuedValue;
+  }
+
+  peek() {
+    if (!this.front) {
+      return null;
+    }
+    return this.front.value;
   }
 }
 
 class BinaryTree {
-  constructor() {
-    this.root = null;
+  constructor(root = null) {
+    this.root = root;
   }
 
-  breadthFirst(current) {
+  breadthFirst() {
     const queue = new Queue();
-    let results = [];
-    queue.enqueue(current);
+    queue.enqueue(this.root);
+    const resultArray = [];
 
-    while (queue.total.length > 0) {
+    while (queue.peek() !== null) {
       const current = queue.dequeue();
-      results.push(current.value);
+      resultArray.push(current.value);
       if (current.left !== null) {
         queue.enqueue(current.left);
       }
@@ -41,14 +65,28 @@ class BinaryTree {
         queue.enqueue(current.right);
       }
     }
-    return results;
+    return resultArray;
   }
 }
 
-const tree = new BinaryTree();
 
-tree.root = new Node(1);
-tree.root.left = new Node(2);
-tree.root.right = new Node (3);
+let one = new Node(1);
+let three = new Node(3);
+let six = new Node(6);
+let seven = new Node(7);
+
+one.right = three;
+three.left = six;
+three.right = seven;
+
+const tree = new BinaryTree(one);
+
+
 
 console.log(tree.breadthFirst());
+
+module.exports = {
+  Node,
+  Queue,
+  BinaryTree
+}
