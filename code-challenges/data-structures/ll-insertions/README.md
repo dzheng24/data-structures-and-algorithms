@@ -8,9 +8,9 @@ Write 3 methods for the Linked List class:
   - `.insertAfter(value,newVal)` which adds a new node with the given `newValue` immediately after the first `value` node.
 
 ## Approach & Efficiency
-I haven't been able to figure this one out yet. I will continue to work on this one. 
+ - For `.append`, time complexity is O(n), because the time depends on n number of nodes in the linked list; space complexity is O(1), because no additional space are being used. 
+ - For `.insertBefore`, time complexity is O(n), because the time depends on n number of nodes the method has to traverse in order to insert the node; space complexity is O(1), because no additional spaces are being used.
+ - For `.insertAfter`, time complexity is O(n), because the time depends on n number of nodes the method has to traverse in order to insert the node; time complexity is O(1), because no additional spaces are being used. 
 
 ## Solution
-![image of append](../../assets/append.JPG)
-![image of insertAfter](../../assets/insertAfter.JPG)
-![image of insertBefore](../../assets/insertBefore.JPG)
+![whiteboard-image](ll-insertions.JPG)
