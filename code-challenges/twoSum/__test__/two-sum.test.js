@@ -9,6 +9,5 @@ describe('testing the twoSum function', () => {
     expect(twoSum(nums,target)).toEqual([1,2])
     let target2 = 9;
     expect(twoSum(nums,target2)).toEqual([0,1])
-  }
-  )
+  })
 })
