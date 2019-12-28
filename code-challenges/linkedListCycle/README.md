@@ -24,3 +24,7 @@ Input: head = [1], pos = -1
 Output: false
 Explanation: There is no cycle in the linked list.
 ```
+
+- I solved this code challenge after reading about Floyd's Tortoise and Hare Algorithm. 
+- Time Complexity: O(n); the run time depends on the n number of nodes. The more nodes there are, the longer it will take the "rabbit" to reach the end, or for it to "lap" the "turtle." 
+- Space Complexity: O(1); because there are only two pointers. No additional space is created. 
