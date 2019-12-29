@@ -2,21 +2,21 @@
 
 // this is a slow way of doing things (converting number to string)
 
-function isPalindrome (num) {
-  if (typeof(num) !== 'number') {
-    return 'please enter an integer'
-  }
-  let strNum = num.toString()
-  let resultStr = '';
-  for (let i = strNum.length - 1; i >= 0; i--) {
-    resultStr += strNum[i]
-  }
-  if (strNum === resultStr) {
-    return true
-  } else {
-    return false
-  }
-}
+// function isPalindrome (num) {
+//   if (typeof(num) !== 'number') {
+//     return 'please enter an integer'
+//   }
+//   let strNum = num.toString()
+//   let resultStr = '';
+//   for (let i = strNum.length - 1; i >= 0; i--) {
+//     resultStr += strNum[i]
+//   }
+//   if (strNum === resultStr) {
+//     return true
+//   } else {
+//     return false
+//   }
+// }
 
 
 // number based reversal method
