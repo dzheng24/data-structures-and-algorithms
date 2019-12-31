@@ -19,3 +19,7 @@ Example 2:
 Input: [4,1,2,1,2]
 Output: 4
 ```
+
+- I used the objects/hashes approach for this problem. 
+- Time complexity: O(n); it depends on n numbers of elements in the array. 
+- Space complexity: O(n); the space required by the object depends on the n numbers of elements in the array.
