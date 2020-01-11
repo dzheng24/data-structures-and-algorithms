@@ -11,7 +11,11 @@ function reverse(num) {
     reversed = reversed * 10 + (num % 10);
     num = parseInt(num / 10);
   }
-  return reversed * multiplier;
+  let answer = reversed * multiplier;
+  if (answer < Math.pow(2, 31) * -1 || answer > Math.pow(2, 31) -1) {
+    return 0;
+  }
+  return answer;
 }
 
 console.log(reverse(1534236469));
