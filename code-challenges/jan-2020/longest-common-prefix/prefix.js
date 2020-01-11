@@ -17,8 +17,6 @@ function longestCommonPrefix (strings) {
   return prefix;
 }
 
-console.log(longestCommonPrefix([]));
-
 module.exports = {
   longestCommonPrefix
 }
