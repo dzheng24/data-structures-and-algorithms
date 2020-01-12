@@ -37,23 +37,41 @@ class Stack {
 
   isEmpty() {
     if (!this.top) {
-      return false;
+      return true;
     }
     else {
-      return true;
+      return false;
     }
   }
 }
 
 function isValid(string) {
-
+  let stack = new Stack();
+  for (let i = 0; i < string.length; i ++) {
+    console.log('the strings is  ' + string[i])
+    console.log('the top of stack is  ' + stack.peek())
+    if (string[i] === '(' || string[i] === '[' || string[i] === '{') {
+      stack.push(string[i]);
+    }
+    else if (string[i] === ')' && stack.peek() === '(') {
+      stack.pop();
+    }
+    else if (string[i] === ']' && stack.peek() === '[') {
+      stack.pop();
+    }
+    else if (string[i] === '}' && stack.peek() === '{') {
+      stack.pop();
+    }
+    else {
+      console.log('here');
+      return false;
+    }
+  }
+  console.log('HERE')
+  return stack.isEmpty();
 }
 
-let seahawks = new Stack();
-seahawks.push('russell');
-seahawks.push('marshawn');
-seahawks.push('dk');
-console.log(JSON.stringify(seahawks));
+console.log(isValid('[()]'));
 
 module.exports = {
   Node,
