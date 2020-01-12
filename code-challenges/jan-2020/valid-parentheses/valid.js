@@ -45,57 +45,30 @@ class Stack {
   }
 }
 
-class Queue {
-  constructor() {
-    this.front = null;
-    this.back = null;
-  }
-
-  enqueue(value) {
-    let node = new Node(value);
-    if (this.front) {
-      this.back.next = node;
-      this.back = node;
+function isValid(string) {
+  let stack = new Stack();
+  for (let i = 0; i < string.length; i ++) {
+    if (string[i] === '(' || string[i] === '[' || string[i] === '{') {
+      stack.push(string[i]);
+    }
+    else if (string[i] === ')' && stack.peek() === '(') {
+      stack.pop();
+    }
+    else if (string[i] === ']' && stack.peek() === '[') {
+      stack.pop();
+    }
+    else if (string[i] === '}' && stack.peek() === '{') {
+      stack.pop();
     }
     else {
-      this.front = node;
-      this.back = node;
-    }
-  }
-
-  dequeue() {
-    if (!this.front) {
-      return null;
-    }
-    let dequeuedValue = this.front.value;
-    this.front = this.front.next;
-    return dequeuedValue;
-  }
-
-  peek() {
-    if (!this.front) {
-      return null;
-    }
-    return this.front.value;
-  }
-
-  isEmpty() {
-    if (!this.front) {
       return false;
     }
-    else {
-      return true;
-    }
   }
+  return stack.isEmpty();
 }
 
 module.exports = {
   Node,
   Stack,
-  Queue,
+  isValid
 }
-
-
-
-
-
