@@ -48,8 +48,6 @@ class Stack {
 function isValid(string) {
   let stack = new Stack();
   for (let i = 0; i < string.length; i ++) {
-    console.log('the strings is  ' + string[i])
-    console.log('the top of stack is  ' + stack.peek())
     if (string[i] === '(' || string[i] === '[' || string[i] === '{') {
       stack.push(string[i]);
     }
@@ -63,15 +61,11 @@ function isValid(string) {
       stack.pop();
     }
     else {
-      console.log('here');
       return false;
     }
   }
-  console.log('HERE')
   return stack.isEmpty();
 }
-
-console.log(isValid('[()]'));
 
 module.exports = {
   Node,

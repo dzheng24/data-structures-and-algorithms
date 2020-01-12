@@ -37,10 +37,10 @@ class Stack {
 
   isEmpty() {
     if (!this.top) {
-      return false;
+      return true;
     }
     else {
-      return true;
+      return false;
     }
   }
 }
