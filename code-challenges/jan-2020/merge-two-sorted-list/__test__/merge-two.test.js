@@ -12,12 +12,12 @@ describe('testing the merge two lists function', () => {
     let list2 = new ListNode(2);
     list2.next = new ListNode(4);
     list2.next.next = new ListNode(6);
-    mergeTwoLists(list1, list2);
-    expect(list1.value).toEqual(1);
-    expect(list1.next.value).toEqual(2);
-    expect(list1.next.next.value).toEqual(3);
-    expect(list1.next.next.next.value).toEqual(4);
-    expect(list1.next.next.next.next.value).toEqual(5);
-    expect(list1.next.next.next.next.next.value).toEqual(6);
+    let result = mergeTwoLists(list1, list2);
+    expect(result.val).toEqual(1);
+    expect(result.next.val).toEqual(2);
+    expect(result.next.next.val).toEqual(3);
+    expect(result.next.next.next.val).toEqual(4);
+    expect(result.next.next.next.next.val).toEqual(5);
+    expect(result.next.next.next.next.next.val).toEqual(6);
   })
 })

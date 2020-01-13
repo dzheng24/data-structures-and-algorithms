@@ -38,12 +38,6 @@ function mergeTwoLists(l1, l2) {
   return newHead.next;
 }
 
-let list1 = new ListNode(1);
-list1.next = new ListNode(3);
-list1.next.next = new ListNode(5);
-
-console.log(list1);
-
 module.exports = {
   ListNode,
   mergeTwoLists
