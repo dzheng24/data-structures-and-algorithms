@@ -23,3 +23,11 @@ Your function should return length = 5, with the first five elements of nums bei
 
 It doesn't matter what values are set beyond the returned length.
 ```
+
+The approach is similar to the one I did yesterday: move zeroes to the end of the array. I made an index variable to keep track of the length of adjusted array. Instead of starting the index variable at 0, I start at 1, because I know the the very first of number in the array has to be unique.
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+
+Helpful Source:
+https://www.youtube.com/watch?v=zIHe2V5Py3U
