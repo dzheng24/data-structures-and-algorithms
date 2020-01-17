@@ -27,3 +27,13 @@ Note that the order of those five elements can be arbitrary.
 
 It doesn't matter what values are set beyond the returned length.
 ```
+
+Shoutout to my friend [John](https://github.com/RevYolution) for helping me!
+
+My Whiteboard:
+![picture of my whiteboard](remove-element.JPG)
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+
+I also want to solve this problem using the splice method next. 
