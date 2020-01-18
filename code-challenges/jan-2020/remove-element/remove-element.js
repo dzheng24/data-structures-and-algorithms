@@ -18,7 +18,19 @@ function removeElement(nums, val) {
   return nums.length - counter;
 }
 
-console.log(removeElement([3,2,2,3], 3))
+function removeElement2(nums, val) {
+  for (let i = nums.length - 1; i >= 0; i--) {
+    if (nums[i] === val) {
+      nums.splice(i, 1);
+    }
+  }
+  return nums.length;
+}
+
+
+// console.log(removeElement([3,2,2,3], 3))
+
+console.log(removeElement2([3,2,2,3], 3))
 
 module.exports = {
   removeElement
