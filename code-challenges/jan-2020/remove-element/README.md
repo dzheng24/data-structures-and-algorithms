@@ -36,4 +36,18 @@ My Whiteboard:
 Time Complexity: O(n)
 Space Complexity: O(1)
 
-I also want to solve this problem using the splice method next. 
+split method: 
+```js
+function removeElement2(nums, val) {
+  for (let i = nums.length - 1; i >= 0; i--) {
+    if (nums[i] === val) {
+      nums.splice(i, 1);
+    }
+  }
+  return nums.length;
+}
+```
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+
