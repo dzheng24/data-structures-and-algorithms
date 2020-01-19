@@ -27,3 +27,6 @@ My approach:
   - Use two pointers to create a `substring`: one starting at the beginning of the array, one ending at the end of the 'needle's length'. 
   - If the substring matches the needle, return the first pointer.
   - If it doesn't match, increase the second pointer by 1. 
+
+Time Complexity: O(n)
+Space Complexity: O(1)
