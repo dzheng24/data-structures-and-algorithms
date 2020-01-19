@@ -21,3 +21,9 @@ Output: -1
 What should we return when `needle` is an empty string? This is a great question to ask during an interview.
 
 For the purpose of this problem, we will return 0 when `needle` is an empty string. This is consistent to C's `strstr()` and Java's `indexOf()`.
+
+My approach:
+  - I learned the `substring()` method while doing this problem. 
+  - Use two pointers to create a `substring`: one starting at the beginning of the array, one ending at the end of the 'needle's length'. 
+  - If the substring matches the needle, return the first pointer.
+  - If it doesn't match, increase the second pointer by 1. 
