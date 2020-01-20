@@ -26,3 +26,6 @@ Example 4:
 Input: [1,3,5,6], 0
 Output: 0
 ```
+
+Time Complexity: O(n)
+Space Complexity: O(1);
