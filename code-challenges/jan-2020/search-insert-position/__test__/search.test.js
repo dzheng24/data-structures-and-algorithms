@@ -1,6 +1,6 @@
 'use strict';
 
-const searchInsert = require('../search').searchInsert;
+const searchInsert = require('../search').searchInsert2;
 
 describe('testing the search insert function', () => {
   it('can return the correct index when the number is in the array', () => {
