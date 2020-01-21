@@ -22,7 +22,17 @@ function searchInsert (nums, target) {
   }
 }
 
+function searchInsert2 (nums, target) {
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] >= target) {
+      return i;
+    }
+  }
+  return nums.length;
+}
+
 module.exports = {
-  searchInsert
+  searchInsert,
+  searchInsert2
 }
 

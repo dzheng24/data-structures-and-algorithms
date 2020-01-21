@@ -27,5 +27,7 @@ Input: [1,3,5,6], 0
 Output: 0
 ```
 
+I solved this two different ways. The second version is a lot cleaner. 
+
 Time Complexity: O(n)
 Space Complexity: O(1);
