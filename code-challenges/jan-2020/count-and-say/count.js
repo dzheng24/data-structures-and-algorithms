@@ -9,17 +9,21 @@
 
 function countAndSay(n) {
   if(n <= 0) return '-1';
-let result = '1';
+  let result = '1';
   for (let i = 1; i < n; i++) {
+    console.log('i is ', i)
     result = build(result);
   }
+  console.log('final result is ', result)
   return result;
 }
 
 function build(result) {
-  let builder = new Array();
+  console.log('the result currently is ', result)
+  let stringBuilder = new Array();
   let p = 0;
   while (p < result.length) {
+    console.log('p is ', p + ' and result is ', result)
     let val = result.charAt(p);
     let count = 0;
 
@@ -27,13 +31,14 @@ function build(result) {
       p++;
       count++;
     }
-    builder.push(count);
-    builder.push(val);
+    stringBuilder.push(count);
+    stringBuilder.push(val);
   }
-  return builder.join('');
+  console.log('builder is ', stringBuilder)
+  return stringBuilder.join('');
 }
 
-console.log(countAndSay(8));
+console.log(countAndSay(4));
 
 
 
