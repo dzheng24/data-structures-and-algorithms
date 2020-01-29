@@ -18,6 +18,8 @@ Helpful source:
 
 [Code Source](https://github.com/bephrem1/backtobackswe/blob/master/Dynamic%20Programming%2C%20Recursion%2C%20%26%20Backtracking/MaxContiguousSubarraySum/MaxContiguousSubarraySum.java)
 
+Whiteboard for approaches in cubic and quadratic time: 
+![whiteboard picture](./assets/slow-ways.jpg)
 
 
 
