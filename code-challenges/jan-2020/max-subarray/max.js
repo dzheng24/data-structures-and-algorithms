@@ -22,6 +22,23 @@ var maxSubArray = function(nums) {
   return maxSubArraySum;
 }
 
+// quadratic time solution
+function maxSubArray2 (nums) {
+  const n = nums.length;
+  let maxSubArraySum = Number.MIN_VALUE;
+  for (let left = 0; left < n; left++) {
+    let windowSum = 0;
+    for (let right = left; right < n; right++) {
+      windowSum += nums[right];
+      maxSubArraySum = Math.max(maxSubArraySum, windowSum);
+    }
+  }
+  return maxSubArraySum;
+}
+
+console.log(maxSubArray2([-2,1,-3,4,-1,2,1,-5,4]));
+
 module.exports = {
-  maxSubArray
+  maxSubArray,
+  maxSubArray2
 }
