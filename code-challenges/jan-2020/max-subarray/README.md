@@ -21,5 +21,9 @@ Helpful source:
 Whiteboard for approaches in cubic and quadratic time: 
 ![whiteboard picture](./assets/slow-ways.jpg)
 
+Whiteboard for approach in linear time, using dynamic programming
+![whiteboard picture](./assets/linear-way.jpg)
 
+Time Complexity: O(n)
 
+Space Complexity: O(1)
