@@ -13,3 +13,9 @@ Example:
 Input: "Hello World"
 Output: 5
 ```
+
+This [video](https://www.youtube.com/watch?v=r1gITiSSfyU) helped me solve the problem.
+
+Time Complexity: O(n)
+
+Space Complexity: O(1)
