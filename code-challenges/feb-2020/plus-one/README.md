@@ -19,3 +19,11 @@ Input: [4,3,2,1]
 Output: [4,3,2,2]
 Explanation: The array represents the integer 4321.
 ```
+
+My approach:
+  - iterate through the array backwards
+  - edge case: when the value equals 9 (change the value to zero, and increase the next value by 1)
+
+Time Complexity: O(n)
+
+Space Complexity: O(1)
