@@ -45,7 +45,7 @@ six.right = seven;
 
 console.log(findTarget(five, 9));
 
-module.exports = { 
+module.exports = {
   TreeNode,
   findTarget
 }
