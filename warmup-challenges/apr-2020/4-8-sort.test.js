@@ -171,7 +171,20 @@ const meetings = [
 
 const sortMeetingsByDay = (arr) => {
   // Solution code here...
+  const order = {
+    Monday: 1,
+    Tuesday: 2,
+    Wednesday: 3,
+    Thursday: 4,
+    Friday: 5
+  }
+
+  return arr.sort((a, b) => {
+    return order[a.dayOfWeek] - order[b.dayOfWeek];
+  })
 };
+
+// source: https://stackoverflow.com/questions/36083827/sorting-object-sunday-to-saturday-in-javascript
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 10 - Stretch Goal
@@ -185,6 +198,22 @@ You DO NOT need to use your solution to Challenge 9 in completing Challenge 10.
 
 const sortSchedule = (arr) => {
   // Solution code here...
+  const order = {
+    Monday: 1,
+    Tuesday: 2,
+    Wednesday: 3,
+    Thursday: 4,
+    Friday: 5
+  }
+
+  return arr.sort((a, b) => {
+    if (order[a.dayOfWeek] < order[b.dayOfWeek]) {
+      return -1
+    }
+    if (order[a.dayOfWeek] === order[b.dayOfWeek] && (parseInt(a.end - a.start) < parseInt(b.end - b.start))) {
+      return -1;
+    }
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -293,7 +322,7 @@ describe('Testing challenge 8', () => {
   });
 });
 
-xdescribe('Testing challenge 9', () => {
+describe('Testing challenge 9', () => {
   test('It should sort meetings by the day on which they happen', () => {
     const sortedMeetings = sortMeetingsByDay(meetings);
     expect(sortedMeetings.slice(0,2)).toEqual(expect.arrayContaining([new Meeting('Monday', '0900', '0945'), new Meeting('Monday', '0900', '1000')]));
@@ -303,7 +332,7 @@ xdescribe('Testing challenge 9', () => {
   });
 });
 
-xdescribe('Testing challenge 10', () => {
+describe('Testing challenge 10', () => {
   test('It should sort meetings by when they happen', () => {
     expect(sortSchedule(meetings)).toStrictEqual([
       new Meeting('Monday', '0900', '0945'),
