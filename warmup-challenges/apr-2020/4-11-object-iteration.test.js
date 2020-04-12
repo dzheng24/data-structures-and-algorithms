@@ -90,7 +90,8 @@ hasChildrenValues(characters, 'Sansa') will return false
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
-  return arr.some(x => x.name === character && x.children.length);
+  let values = Object.values(arr);
+  return values.some(x => x.name === character && x.children.length);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -103,6 +104,14 @@ The input and output of this function are the same as the input and output from 
 
 const hasChildrenEntries = (arr, character) => {
   // Solution code here...
+  for (let i = 0; i < arr.length; i++) {
+    let entries = Object.entries(arr[i]);
+    if (entries[0].includes(character) && !entries[2].includes([])) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -113,6 +122,21 @@ Write a function named totalCharacters that takes in an array and returns the nu
 
 const totalCharacters = (arr) => {
   // Solution code here...
+  let result = [];
+  arr.forEach(x => {
+    if (x.name) {
+      result.push(x.name);
+    }
+    if (x.spouse) {
+      result.push(x.spouse);
+    }
+    if (x.children.length) {
+      while (x.children.length) {
+        result.push(x.children.shift());
+      }
+    }
+  })
+  return result.length;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -189,7 +213,7 @@ describe('Testing challenge 3', () => {
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should return true for characters that have children', () => {
     expect(hasChildrenEntries(characters, 'Eddard')).toBeTruthy();
   });
@@ -199,7 +223,7 @@ xdescribe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should return the number of characters in the array', () => {
     expect(totalCharacters(characters)).toStrictEqual(26);
   });
